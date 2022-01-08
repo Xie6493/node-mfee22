@@ -1,24 +1,21 @@
-const { readFile } = require('fs');
-
-let data = 'test.txt';
-let readFilePromise = (data) => {
+const { readFile } = require("fs/promises");
+let data = "test.txt";
+let promise = function () {
   return new Promise((resolve, reject) => {
-    readFile(data, 'utf-8', (err, data) => {
+    readFile("test.txt", "utf-8", (err, data) => {
       if (err) {
-       
-        console.log(err)
+        console.log(reject);
         return;
       }
-      
-      console.log(data)
+      console.log(resolve);
     });
   });
 };
 
-readFilePromise(data)
+readFile(data)
   .then((result) => {
     console.log(`${result}`);
   })
   .catch((err) => {
-    console.log(`${err}`);
+    console.log(`${reject}`);
   });
