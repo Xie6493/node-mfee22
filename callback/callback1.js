@@ -16,12 +16,12 @@ let doWork = function (job, timer, callback) {
     console.log(`${result} at ${dt.toISOString()}`);
   });
   
-  doWork("吃早餐", 2000, (err, result) => {
+  doWork("吃早餐", 4000, (err, result) => {
     let dt = new Date();
     console.log(`${result} at ${dt.toISOString()}`);
   });
   
-  doWork("寫功課", 3000, (err, result) => {
+  doWork("寫功課", 6000, (err, result) => {
     let dt = new Date();
     console.log(`${result} at ${dt.toISOString()}`);
   });
