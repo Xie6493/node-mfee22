@@ -1,7 +1,6 @@
 const { readFile } = require("fs/promises");
 let data = "test.txt";
-let promise = function () {
-  return new Promise((resolve, reject) => {
+let promise = new Promise((resolve, reject) => {
     readFile("test.txt", "utf-8", (err, data) => {
       if (err) {
         console.log(reject);
@@ -10,7 +9,7 @@ let promise = function () {
       console.log(resolve);
     });
   });
-};
+;
 
 readFile(data)
   .then((result) => {
