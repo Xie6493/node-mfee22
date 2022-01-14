@@ -1,6 +1,7 @@
 const axios = require('axios');
 
 
+
 axios.get("http://34.221.173.92:3000/data")
   .then(function (response) {
     // handle success
